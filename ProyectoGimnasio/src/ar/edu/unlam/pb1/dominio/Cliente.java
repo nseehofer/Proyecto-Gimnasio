@@ -12,7 +12,7 @@ public class Cliente {
 	private Actividad[] actividades;
 
 	public Cliente(int dni, String nombre, String contrasenia) {
-		// TODO: El cliente podra realizar hasta 10000 actividades
+		
 		this.dni = dni;
 		this.nombre = nombre;
 		this.contrasenia = contrasenia;
@@ -20,7 +20,7 @@ public class Cliente {
 	}
 
 	public void realizarActividad(Actividad actividad) {
-		// TODO: Agrega una actividad a las actividades del cliente
+		
 		boolean actividadAgregada = false;
 		int indice = 0;
 
@@ -35,7 +35,7 @@ public class Cliente {
 	}
 
 	public boolean eliminarActividadPorId(int id) {
-		// TODO: busca una actividad por su id y en caso de existir, la elimina.
+		
 		boolean actividadEliminada = false;
 		int indice = 0;
 		while (indice < this.actividades.length && !actividadEliminada) {
@@ -49,8 +49,7 @@ public class Cliente {
 	}
 
 	public int obtenerCantidadDeActividadesRealizadas() {
-		// TODO: revisar cuantas actividades realizo el cliente y devolver el valor
-		// correspondiente
+		
 		boolean actividadRealizada = false;
 		int indice = 0, acumuladorDeActividadesRealizadas = indice - 1;
 
@@ -65,8 +64,7 @@ public class Cliente {
 	}
 
 	public double obtenerCantidadDeCaloriasQuemadasPorActividadDeTipo(TipoActividad tipoActividad) {
-		// TODO: Obtener la cantidad de calorias quemadas por el cliente al realizar
-		// actividades de un tipo determinado
+		
 
 		int indice = 0;
 		boolean noRealizoActividad = false;

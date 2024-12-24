@@ -8,7 +8,7 @@ public class Gimnasio {
 	private Cliente[] clientes;
 
 	public Gimnasio(String nombre) {
-		// TODO: se debe adminitar hasta 10000 clientes
+		
 		this.actividades = new Actividad[15];
 		this.agregarActividades(); // :O
 		this.clientes = new Cliente[1000];
@@ -16,9 +16,7 @@ public class Gimnasio {
 	}
 
 	public boolean iniciarSesion(int dni, String contrasenia) {
-		// TODO: obtiene un cliente por su dni y, si existe, verifica que la contrasenia
-		// sea la suministrada. Devuelve verdadero en caso de que las credenciales sean
-		// validas.
+		
 		boolean credencialesValidas = false;
 		Cliente clienteBuscado = buscarClientePorDni(dni);
 
@@ -30,15 +28,12 @@ public class Gimnasio {
 	}
 
 	public boolean registrarCliente(Cliente cliente) {
-		// TODO: se debe registrar el cliente, agregandolo a los clientes del gimnasio,
-		// solo en caso de que el dni del cliente suministrado no exista entre los
-		// clientes actuales. Devuelve verdadero en caso de exito.
-
+		
 		int indice = 0;
 		boolean clienteRegistrado = false;
 
 		while (indice < this.clientes.length && !clienteRegistrado) {
-			// COMO OBTENGO EL DNI DE UN CLIENTE QUE RECIEN ME ENTRA POR PARAMETRO ?
+			
 
 			if (this.clientes[indice] == null) {
 				this.clientes[indice] = cliente;
@@ -51,8 +46,7 @@ public class Gimnasio {
 	}
 
 	public Actividad buscarActividadPorId(int id) {
-		// TODO: Buscar entre las actividades del gimnasio alguna que aplique con el id
-		// suministrado y devolverla
+		
 
 		Actividad actividadEncontrada = null;
 		boolean seEncontro = false;
@@ -68,9 +62,7 @@ public class Gimnasio {
 	}
 
 	public Cliente buscarClientePorDni(int dni) {
-		// TODO: Revisa entre los clientes del gimnasio, si algun posee el dni indicado
-		// y lo devuelve.
-
+		
 		boolean existenClientesConEseDni = false;
 		int indice = 0;
 		Cliente clienteConDniIngresado = null;
@@ -87,12 +79,7 @@ public class Gimnasio {
 	}
 
 	public boolean validarContrasenia(String contrasenia) {
-		// TODO: Devuelve verdadero en caso de que la contrasenia contenga: 2 o mas
-		// mayusculas, un largo minimo de 8 caracteres y, si tiene numeros y estan
-		// juntos, no pueden
-		// ser consecutivos. Ejemplo valido: PassWord77 - Ejemplos invalidos:
-		// PassWord123 o PassWord234 o PassWord345
-		// -> notar que los numeros consecutivos son: 1 y 2 o 2 y 3, etc.
+		
 
 		int contadorDeMayusculas = 0;
 		boolean contraseniaValida = false, tieneDosCaracteresNumericosConsecutivos = false;
@@ -120,9 +107,7 @@ public class Gimnasio {
 
 		}
 
-		// System.out.println("\n Contrasenia valida!");
-		// contraseniaValida = true;
-
+		
 		if (!tieneDosCaracteresNumericosConsecutivos && contadorDeMayusculas >= 2) {
 			contraseniaValida = true;
 
@@ -134,7 +119,7 @@ public class Gimnasio {
 	}
 
 	public Cliente obtenerElClienteQueMenosActividadesRealizo() {
-		// TODO: devuelve el cliente que menos actividades realizo
+		
 
 		Cliente clienteQueMenosActividadRealizo = this.clientes[0];
 		int cantidadDeActividadRealizadaPorElClienteQueMenosRealizo = clienteQueMenosActividadRealizo
@@ -152,8 +137,7 @@ public class Gimnasio {
 	}
 
 	public Actividad[] obtenerActividadesOrdenadasPorCaloriasQueQuemaDescendente() {
-		// TODO: Ordenar las actividades de forma descendente por la cantidad de
-		// calorias que se queman y devolverlas
+		
 
 		Actividad auxParaOrdenar = null;
 
